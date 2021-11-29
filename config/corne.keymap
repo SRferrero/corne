@@ -23,14 +23,14 @@
             compatible = "zmk,combos";
             combo_esc {
                 timeout-ms = <50>;
-                key-positions = <0 1>;
+                key-positions = <1 2>;
                 bindings = <&kp ESC>;
             };
-            // combo_tab {
-            //     timeout-ms = <50>;
-            //     key-positions = <10 11>;
-            //     bindings = <&kp TAB>;
-            // };
+            combo_tab {
+                timeout-ms = <50>;
+                key-positions = <14 15>;
+                bindings = <&kp TAB>;
+            };
             // combo_ralt {
             //     timeout-ms = <50>;
             //     key-positions = <17 16>;
@@ -106,19 +106,19 @@
 
                 default_layer {
                         bindings = <
-        &kp TAB   &kp Q &kp D &kp R &kp W &kp B   &kp J &kp F  &kp U     &kp P   &kp SEMI &kp BSPC
-        &kp LCTRL &hm LCTL  A &kp S &kp H &kp T &kp G   &kp Y &kp N  &kp E     &kp O  &kp I    &kp SQT
+        &kp TAB   &kp Q        &kp D &kp R &kp W &kp B   &kp J &kp F  &kp U     &kp P   &kp SEMI        &kp BSPC
+        &kp LCTRL &hm LCTRL  A &kp S &kp H &kp T &kp G   &kp Y &kp N  &kp E     &kp O   &kp I           &kp SQT
         &kp LSHFT &hs LSHIFT Z &kp X &kp M &kp C &kp V   &kp K &kp L  &kp COMMA &kp DOT &hs RSHIFT FSLH &kp RSHFT
-                        &kp LGUI &mo 1 &kp LALT   &kp SPACE &mo 2 &kp RET
+                        &kp LGUI &mo 1 &kp LALT          &kp SPACE &mo 2 &kp RET
                         >;
                 };
                 
                 lower_layer {
                         bindings = <
-        &kp ESC  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
+        &kp ESC   &kp EXCL &kp AT             &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
         &kp LCTRL &trans   &mt LG(LS(LC(N4))) &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-        &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
-                                        &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+        &kp LSHFT &trans   &trans             &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
+                                                       &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
                 };
 
