@@ -28,7 +28,7 @@
             };
             combo_tab {
                 timeout-ms = <50>;
-                key-positions = <14 15>;
+                key-positions = <13 14>;
                 bindings = <&kp TAB>;
             };
             // combo_ralt {
@@ -115,28 +115,28 @@
                 
                 lower_layer {
                         bindings = <
-        &kp ESC   &kp EXCL &kp AT             &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR &kp BSPC
-        &kp GRAVE &trans   &kp LG(LS(LC(N4))) &trans   &trans   &trans      &kp LEFT  &kp DOWN  &kp UP          &kp RIGHT &kp BSLH &kp GRAVE
-        &kp TILDE &trans   &trans             &trans   &trans   &trans      &kp UNDER &kp LEFT  &kp DOWN        &kp RIGHT &kp PIPE &kp TILDE
-                                              &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+        &kp ESC   &kp EXCL         &kp AT &kp HASH &kp DLLR  &kp PRCNT          &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR &kp BSPC
+        &kp GRAVE &kp LG(LA(DOWN)) &trans &kp F2   &trans    &kp LG(LS(LC(N4))) &kp LEFT  &kp DOWN  &kp UP          &kp RIGHT &kp BSLH &kp GRAVE
+        &kp TILDE &trans           &trans &trans   &kp SPACE &kp RIGHT          &kp UNDER &kp LEFT  &kp DOWN        &kp RIGHT &kp PIPE &kp TILDE
+                                              &trans   &trans   &trans         &trans    &trans    &trans
                         >;
                 };
-
+                
                 raise_layer {
                         bindings = <
-        &kp TAB    &bt BT_NXT   &bt BT_SEL 0 &kp LPAR    &kp RPAR &kp UNDER       &kp MINUS &kp N7   &kp N8 &kp N9  &kp DOT   &kp BSPC
+        &kp TAB    &bt BT_NXT   &bt BT_SEL 0 &kp LPAR    &kp RPAR &kp UNDER       &kp MINUS &kp N7   &kp N8 &kp N9  &kp COMMA &kp BSPC
         &bt BT_CLR &bt BT_SEL 1 &bt BT_SEL 2 &kp LBRC    &kp RBRC &kp PIPE        &kp PLUS  &kp N4   &kp N5 &kp N6  &kp FSLH  &kp KP_MULTIPLY
         &kp LSHFT  &bt BT_SEL 3 &bt BT_SEL 4 &kp LBKT    &kp RBKT &kp BSLH        &kp N0    &kp N1   &kp N2 &kp N3  &kp EQUAL &trans
-                                             &kp LGUI    &trans   &kp SPACE       &trans    &trans   &trans
+                                             &trans      &trans   &trans          &trans    &trans   &trans
                         >;
                 };
 
     //          tri_layer {
     //                 bindings = <
-    // &kp TAB    &bt BT_NXT   &bt BT_SEL 0 &kp LPAR    &kp RPAR &kp UNDER       &kp MINUS &kp N7   &kp N8 &kp N9  &kp DOT   &kp BSPC
-    // &bt BT_CLR &bt BT_SEL 1 &bt BT_SEL 2 &kp LBKT    &kp RBKT &kp PIPE        &kp PLUS  &kp N4   &kp N5 &kp N6  &kp FSLH  &mt LG(LS(LC(N4)))
-    // &kp LSHFT  &bt BT_SEL 3 &bt BT_SEL 4 &kp LBRC    &kp RBRC &kp BSLH        &kp N0    &kp N1   &kp N2 &kp N3  &kp EQUAL &trans
-    //                                      &kp LGUI    &trans   &kp SPACE       &trans    &trans   &trans
+    // &kp TAB    &bt BT_NXT   &bt BT_SEL 0 &kp LPAR  &kp RPAR &kp UNDER   &kp MINUS &kp N7   &kp N8 &kp N9  &kp DOT   &kp BSPC
+    // &bt BT_CLR &bt BT_SEL 1 &bt BT_SEL 2 &kp LBKT  &kp RBKT &kp PIPE    &kp PLUS  &kp N4   &kp N5 &kp N6  &kp FSLH  &mt LG(LS(LC(N4)))
+    // &kp LSHFT  &bt BT_SEL 3 &bt BT_SEL 4 &kp LBRC  &kp RBRC &kp BSLH    &kp N0    &kp N1   &kp N2 &kp N3  &kp EQUAL &trans
+    //                                      &trans    &trans   &trans      &trans    &trans    &trans
     //                 >;
     //         };
         };
