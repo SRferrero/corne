@@ -120,16 +120,16 @@
         &kp TAB   &kp Q        &kp D       &kp R      &kp W &kp B     &kp J &kp F  &kp U     &kp P   &kp SEMI        &kp BSPC
         &kp LCTRL &kp A        &hm LCTRL S &hm LALT H &kp T &kp G     &kp Y &kp N  &kp E     &kp O   &kp I           &kp SQT
         &kp LSHFT &hs LSHIFT Z &kp X       &kp M      &kp C &kp V     &kp K &kp L  &kp COMMA &kp DOT &hs RSHIFT FSLH &kp RSHFT
-                                          &kp LGUI &mo 1 &kp LALT     &kp SPACE &mo 2 &kp RET
+                                      &mt LGUI TAB &to 1 &kp LALT     &kp SPACE &to 2 &kp RET
                         >;
                 };
                 
                 lower_layer {
                         bindings = <
-        &kp ESC   &kp EXCL               &kp AT &kp HASH &kp DLLR  &kp PRCNT          &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR &kp BSPC
-        &hm LCTRL GRAVE &kp LS(LA(DOWN)) &trans &kp F12  &trans    &kp LG(LS(LC(N4))) &kp LEFT  &kp DOWN  &kp UP          &kp RIGHT &kp BSLH &kp GRAVE
-        &kp LSHFT &kp TILDE              &trans &trans   &kp SPACE &kp RIGHT          &kp UNDER &kp LEFT  &kp DOWN        &kp RIGHT &kp PIPE &kp TILDE
-                                              &trans   &trans   &trans         &trans    &trans    &trans
+        &kp ESC   &kp EXCL               &kp AT &kp HASH     &kp DLLR  &kp PRCNT          &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR &kp BSPC
+        &hm LCTRL GRAVE &kp LS(LA(DOWN)) &trans &hm LALT F12 &trans    &kp LG(LS(LC(N4))) &kp LEFT  &kp DOWN  &kp UP          &kp RIGHT &kp BSLH &kp GRAVE
+        &kp LSHFT &kp TILDE              &trans &trans       &kp SPACE &kp RIGHT          &kp UNDER &kp LEFT  &kp DOWN        &kp RIGHT &kp PIPE &kp TILDE
+                                                          &trans   &to 0   &trans         &trans    &to 0    &trans
                         >;
                 };
                 
@@ -138,7 +138,7 @@
         &kp TAB    &bt BT_NXT   &bt BT_SEL 0 &kp LPAR    &kp RPAR &kp UNDER       &kp MINUS &kp N7   &kp N8 &kp N9  &kp COMMA &kp BSPC
         &bt BT_CLR &bt BT_SEL 1 &bt BT_SEL 2 &kp LBRC    &kp RBRC &kp PIPE        &kp PLUS  &kp N4   &kp N5 &kp N6  &kp FSLH  &kp KP_MULTIPLY
         &kp LSHFT  &bt BT_SEL 3 &bt BT_SEL 4 &kp LBKT    &kp RBKT &kp BSLH        &kp N0    &kp N1   &kp N2 &kp N3  &kp EQUAL &trans
-                                             &trans      &trans   &trans          &trans    &trans   &trans
+                                             &trans      &to 0   &trans          &trans    &to 0   &trans
                         >;
                 };
 
