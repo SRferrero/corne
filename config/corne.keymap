@@ -31,6 +31,17 @@
                 key-positions = <14 15>;
                 bindings = <&kp TAB>;
             };
+            combo_ent {
+                timeout-ms = <50>;
+                key-positions = <32 33>;
+                bindings = <&kp RET>;
+            };
+    
+            combo_bspc {
+                timeout-ms = <50>;
+                key-positions = <8 9>;
+                bindings = <&kp BSPC>;
+            };
             // combo_ralt {
             //     timeout-ms = <50>;
             //     key-positions = <17 16>;
@@ -106,10 +117,10 @@
 
                 default_layer {
                         bindings = <
-        &kp TAB   &kp Q        &kp D &kp R &kp W &kp B   &kp J &kp F  &kp U     &kp P   &kp SEMI        &kp BSPC
-        &kp LCTRL &kp A        &hm LCTRL S &kp H &kp T &kp G   &kp Y &kp N  &kp E     &kp O   &kp I           &kp SQT
-        &kp LSHFT &hs LSHIFT Z &kp X &kp M &kp C &kp V   &kp K &kp L  &kp COMMA &kp DOT &hs RSHIFT FSLH &kp RSHFT
-                        &kp LGUI &mo 1 &kp LALT          &kp SPACE &mo 2 &kp RET
+        &kp TAB   &kp Q        &kp D       &kp R      &kp W &kp B     &kp J &kp F  &kp U     &kp P   &kp SEMI        &kp BSPC
+        &kp LCTRL &kp A        &hm LCTRL S &hm LALT H &kp T &kp G     &kp Y &kp N  &kp E     &kp O   &kp I           &kp SQT
+        &kp LSHFT &hs LSHIFT Z &kp X       &kp M      &kp C &kp V     &kp K &kp L  &kp COMMA &kp DOT &hs RSHIFT FSLH &kp RSHFT
+                                          &kp LGUI &mo 1 &kp LALT     &kp SPACE &mo 2 &kp RET
                         >;
                 };
                 
