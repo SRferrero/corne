@@ -129,26 +129,26 @@
         &kp ESC   &kp EXCL               &kp AT &kp HASH     &kp DLLR  &kp PRCNT          &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR &kp BSPC
         &hm LCTRL GRAVE &kp LS(LA(DOWN)) &trans &hm LALT F12 &trans    &kp LG(LS(LC(N4))) &kp LEFT  &kp DOWN  &kp UP          &kp RIGHT &kp BSLH &kp GRAVE
         &kp LSHFT &kp TILDE              &trans &trans       &kp SPACE &kp RIGHT          &kp UNDER &kp LEFT  &kp DOWN        &kp RIGHT &kp PIPE &kp TILDE
-                                                          &trans   &to 0   &trans         &trans    &to 3    &trans
+                                                          &trans   &to 0   &trans         &trans    &to 0    &trans
                         >;
                 };
                 
                 raise_layer {
                         bindings = <
-        &kp TAB    &bt BT_NXT   &bt BT_SEL 0 &kp LPAR    &kp RPAR &kp UNDER       &kp MINUS &kp N7   &kp N8 &kp N9  &kp COMMA &kp BSPC
-        &bt BT_CLR &bt BT_SEL 1 &bt BT_SEL 2 &kp LBRC    &kp RBRC &kp PIPE        &kp PLUS  &kp N4   &kp N5 &kp N6  &kp FSLH  &kp KP_MULTIPLY
-        &kp LSHFT  &bt BT_SEL 3 &bt BT_SEL 4 &kp LBKT    &kp RBKT &kp BSLH        &kp N0    &kp N1   &kp N2 &kp N3  &kp EQUAL &trans
-                                             &trans      &to 0   &trans          &trans    &to 0   &trans
+        &kp TAB         &trans &trans &kp LPAR    &kp RPAR &kp UNDER       &kp MINUS &kp N7   &kp N8 &kp N9  &kp COMMA &kp BSPC
+        &hm LCTRL GRAVE &trans &trans &kp LBRC    &kp RBRC &kp PIPE        &kp PLUS  &kp N4   &kp N5 &kp N6  &kp FSLH  &kp KP_MULTIPLY
+        &kp LSHFT       &trans &trans &kp LBKT    &kp RBKT &kp BSLH        &kp N0    &kp N1   &kp N2 &kp N3  &kp EQUAL &trans
+                                             &trans      &to 0   &trans          &trans    &to 3   &trans
                         >;
                 };
 
-    //          tri_layer {
-    //                 bindings = <
-    // &kp TAB    &bt BT_NXT   &bt BT_SEL 0 &kp LPAR  &kp RPAR &kp UNDER   &kp MINUS &kp N7   &kp N8 &kp N9  &kp DOT   &kp BSPC
-    // &bt BT_CLR &bt BT_SEL 1 &bt BT_SEL 2 &kp LBKT  &kp RBKT &kp PIPE    &kp PLUS  &kp N4   &kp N5 &kp N6  &kp FSLH  &mt LG(LS(LC(N4)))
-    // &kp LSHFT  &bt BT_SEL 3 &bt BT_SEL 4 &kp LBRC  &kp RBRC &kp BSLH    &kp N0    &kp N1   &kp N2 &kp N3  &kp EQUAL &trans
-    //                                      &trans    &trans   &trans      &trans    &trans    &trans
-    //                 >;
-    //         };
+             tri_layer {
+                    bindings = <
+    &kp TAB    &bt BT_NXT   &bt BT_SEL 0 &kp LPAR  &kp RPAR &kp UNDER   &kp MINUS &trans &trans &trans  &kp DOT   &kp BSPC
+    &bt BT_CLR &bt BT_SEL 1 &bt BT_SEL 2 &kp LBKT  &kp RBKT &kp PIPE    &kp PLUS  &trans &trans &trans  &kp FSLH  &mt LG(LS(LC(N4)))
+    &kp LSHFT  &bt BT_SEL 3 &bt BT_SEL 4 &kp LBRC  &kp RBRC &kp BSLH    &trans    &trans &trans &trans  &kp EQUAL &trans
+                                         &trans    &to 0   &trans      &trans    &to 0    &trans
+                    >;
+            };
         };
 };
