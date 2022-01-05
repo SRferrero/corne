@@ -137,13 +137,13 @@
                         >;
                 };
 
-    //          tri_layer {
-    //                 bindings = <
-    // &kp TAB    &bt BT_NXT   &bt BT_SEL 0 &kp LPAR  &kp RPAR &kp UNDER   &kp MINUS &trans &trans &trans  &kp DOT   &kp BSPC
-    // &bt BT_CLR &bt BT_SEL 1 &bt BT_SEL 2 &kp LBKT  &kp RBKT &kp PIPE    &kp PLUS  &trans &trans &trans  &kp FSLH  &mt LG(LS(LC(N4)))
-    // &kp LSHFT  &bt BT_SEL 3 &bt BT_SEL 4 &kp LBRC  &kp RBRC &kp BSLH    &trans    &trans &trans &trans  &kp EQUAL &trans
-    //                                      &trans    &to 0   &trans      &trans    &to 0    &trans
-    //                 >;
-    //         };
+             third_layer {
+                    bindings = <
+    &kp TAB    &bt BT_NXT   &bt BT_SEL 0 &kp LPAR  &kp RPAR &kp UNDER   &kp MINUS &trans &trans &trans  &kp DOT   &kp BSPC
+    &bt BT_CLR &bt BT_SEL 1 &bt BT_SEL 2 &kp LBKT  &kp RBKT &kp PIPE    &kp PLUS  &trans &trans &trans  &kp FSLH  &mt LG(LS(LC(N4)))
+    &kp LSHFT  &bt BT_SEL 3 &bt BT_SEL 4 &kp LBRC  &kp RBRC &kp BSLH    &trans    &trans &trans &trans  &kp EQUAL &trans
+                                         &trans    &to 0   &trans      &trans    &to 0    &trans
+                    >;
+            };
         };
 };
