@@ -15,49 +15,62 @@
 
 / {
     combos {
-            compatible = "zmk,combos";
-            combo_esc {
-                timeout-ms = <50>;
-                key-positions = <2 3>;
-                bindings = <&kp ESC>;
-            };
-            combo_tab {
-                timeout-ms = <50>;
-                key-positions = <14 15>;
-                bindings = <&kp TAB>;
-            };
-            combo_ent {
-                timeout-ms = <50>;
-                key-positions = <32 33>;
-                bindings = <&kp RET>;
-            };
-    
-            combo_bspc {
-                timeout-ms = <50>;
-                key-positions = <8 9>;
-                bindings = <&kp BSPC>;
-            };
-            // combo_ralt {
-            //     timeout-ms = <50>;
-            //     key-positions = <17 16>;
-            //     bindings = <&kp RALT>;
-            // };
-            // combo_lalt {
-            //     timeout-ms = <50>;
-            //     key-positions = <11 12>;
-            //     bindings = <&kp LALT>;
-            // };
-            // combo_lgui {
-            //     timeout-ms = <50>;
-            //     key-positions = <12 13>;
-            //     bindings = <&kp LGUI>;
-            // };
-            // combo_rgui {
-            //     timeout-ms = <50>;
-            //     key-positions = <17 18>;
-            //     bindings = <&kp RGUI>;
-            // };     
+        compatible = "zmk,combos";
+        esc {
+            timeout-ms = <40>;
+            key-positions = <1 2>;
+            bindings = <&kp ESC>;
         };
+        
+        ent {
+            timeout-ms = <40>;
+	        key-positions = <27 28>;
+            bindings = <&kp RET>;
+        };
+
+        bspc {
+            timeout-ms = <40>;
+	        key-positions = <7 8>;
+            bindings = <&kp BSPC>;
+        };
+        
+        lalt {
+            timeout-ms = <40>;
+            key-positions = <11 12>;
+            bindings = <&kp LALT>;
+        };
+
+        to_bt {
+            timeout-ms = <40>;
+            key-positions = <10 19>;
+            bindings = <&to 4>;
+        };
+
+        sl_fn {
+            timeout-ms = <40>;
+            key-positions = <0 9>;
+            bindings = <&sl 3>;
+        };
+
+        to0 {
+            timeout-ms = <40>;
+            key-positions = <1 2 3>;
+            bindings = <&to 0>;
+        };
+
+        sl2 {
+            timeout-ms = <40>;
+            key-positions = <6 7 8>;
+            bindings = <&sl 2>;
+        };
+
+        sl1 {
+            timeout-ms = <40>;
+            key-positions = <22 23>;
+            bindings = <&sl 1>;
+        };         
+    };
+
         
         behaviors {
             hm: homerow_mods {
@@ -96,15 +109,6 @@
                 flavor = "tap-preferred";
                 bindings = <&kp>, <&kp>;
             };
-            bl: layertap {
-                compatible = "zmk,behavior-hold-tap";
-                label = "LAYERTAP";
-                #binding-cells = <2>;
-                tapping-term-ms = <150>;
-                quick_tap_ms = <0>;
-                flavor = "tap-preferred";
-                bindings = <&to>, <&kp>;
-            };
         };
             
         keymap {
@@ -137,9 +141,18 @@
                         >;
                 };
 
+            tri_layer {
+                bindings = <
+            &trans &kp F1 &kp F2   &kp F3 &kp F4 &kp F5  	&kp T  &trans  &trans &trans &trans &trans
+            &trans &kp F6 &kp F7   &kp F8 &kp F9 &kp F10    &trans &trans  &trans &trans &trans &trans  
+            &trans &kp F11 &kp F12 &trans &trans &trans 	&trans &trans  &trans &trans &trans &trans
+                                          &trans &to 0  	&trans &trans 
+                >;
+            };
+
             bt {
                 bindings = <
-        &kp TAB    &bt BT_NXT   &bt BT_SEL 0 &kp LPAR  &kp RPAR &kp UNDER     &kp MINUS &trans  &trans  &trans  &kp DOT   &kp BSPC
+        &kp TAB    &bt BT_NXT   &bt BT_SEL 0 &kp LPAR  &kp RPAR &kp UNDER     &kp B &trans  &trans  &trans  &kp DOT   &kp BSPC
         &bt BT_CLR &bt BT_SEL 1 &bt BT_SEL 2 &kp LBKT  &kp RBKT &kp PIPE      &kp PLUS  &trans  &trans  &trans  &kp FSLH  &kp LG(LS(LC(N4)))
         &kp LSHFT  &bt BT_SEL 3 &bt BT_SEL 4 &kp LBRC  &kp RBRC &kp BSLH      &trans    &trans  &trans  &trans  &kp EQUAL &trans
                                                 &trans    &to 0   &trans      &trans    &to 0    &trans
