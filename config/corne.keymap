@@ -58,6 +58,12 @@
             bindings = <&to 0>;
         };
 
+        togame {
+            timeout-ms = <40>;
+            key-positions = <0 12 24>;
+            bindings = <&to 5>;
+        };
+
         sl2 {
             timeout-ms = <40>;
             key-positions = <7 8 9>;
@@ -158,5 +164,14 @@
                                                 &trans    &to 0   &trans      &trans    &to 0    &trans
                     >;
             };
+
+            league {
+                bindings = <
+        &kp TAB   &kp Q        &kp D       &kp R      &kp W &kp B     &kp J &kp F  &kp U     &kp P   &kp SEMI        &kp BSPC
+        &kp LCTRL &kp A        &kp S       &kp H      &kp T &kp G     &kp Y &kp N  &kp E     &kp O   &kp I           &kp SQT
+        &kp LSHFT &hs LSHIFT Z &kp X       &kp M      &kp C &kp V     &kp K &kp L  &kp COMMA &kp DOT &hs RSHIFT FSLH &kp RSHFT
+                                      &mt LGUI TAB &kp LALT &kp SPACE     &kp SPACE &to 0 &kp RET
+                        >;
+                };
         };
 };
