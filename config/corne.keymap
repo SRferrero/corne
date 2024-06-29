@@ -18,7 +18,7 @@
         compatible = "zmk,combos";
         esc {
             timeout-ms = <40>;
-            key-positions = <2 3>;
+            key-positions = <1 2>;
             bindings = <&kp ESC>;
         };
         
@@ -30,19 +30,14 @@
 
         bspc {
             timeout-ms = <40>;
-	        key-positions = <8 9>;
+	        key-positions = <7 8>;
             bindings = <&kp BSPC>;
         };
         
-        // lalt {
-        //     timeout-ms = <40>;
-        //     key-positions = <11 12>;
-        //     bindings = <&kp LALT>;
-        // };
 
         to_bt {
             timeout-ms = <40>;
-            key-positions = <1 10>;
+            key-positions = <0 9>;
             bindings = <&to 4>;
         };
 
@@ -54,19 +49,13 @@
 
         to0 {
             timeout-ms = <40>;
-            key-positions = <2 3 4>;
+            key-positions = <1 2 3>;
             bindings = <&to 0>;
-        };
-
-        togame {
-            timeout-ms = <40>;
-            key-positions = <0 12 24>;
-            bindings = <&to 5>;
         };
 
         sl2 {
             timeout-ms = <40>;
-            key-positions = <7 8 9>;
+            key-positions = <6 7 8>;
             bindings = <&sl 2>;
         };
 
@@ -122,27 +111,27 @@
 
             default_layer {
                 bindings = <
-        &kp TAB   &kp Q        &kp D       &kp R      &kp W &kp B     &kp J &kp F  &kp U     &kp P   &kp SEMI        &kp BSPC
-        &kp LCTRL &kp A        &hm LCTRL S &hm LALT H &kp T &kp G     &kp Y &kp N  &kp E     &kp O   &kp I           &kp SQT
-        &kp LSHFT &hs LSHIFT Z &kp X       &kp M      &kp C &kp V     &kp K &kp L  &kp COMMA &kp DOT &hs RSHIFT FSLH &kp RSHFT
+        &kp Q        &kp D       &kp R      &kp W &kp B     &kp J &kp F  &kp U     &kp P   &kp SEMI        
+        &kp A        &hm LCTRL S &hm LALT H &kp T &kp G     &kp Y &kp N  &kp E     &kp O   &kp I           
+        &hs LSHIFT Z &kp X       &kp M      &kp C &kp V     &kp K &kp L  &kp COMMA &kp DOT &hs RSHIFT FSLH 
                                       &mt LGUI TAB &mo 1 &kp LALT     &kp SPACE &mo 2 &kp RET
                         >;
                 };
                 
             lower_layer {
                 bindings = <
-        &kp ESC   &kp BANG         &kp ATSN         &kp HASH         &kp DLLR        &kp PRCT    			&kp CRRT  &kp AMPS  &kp KMLT &kp LPRN  &kp RPRN &kp BSPC
-        &kp LCTRL &kp LS(LA(DOWN)) &kp LS(LA(DOWN)) &hm LALT F12     &kp F2          &kp LG(LS(LC(N4))) 	&kp LEFT  &kp DOWN  &kp UP   &kp RIGHT &kp QUOT &kp GRAVE
-        &kp LSHFT &hs LSFT GRAVE   &kp TILDE 	    &kp NON_US_BSLH  &kp LG(LA(C))   &kp LG(LS(LA(V)))      &kp UNDER &kp LEFT  &kp DOWN &kp RIGHT &kp PIPE &trans
+        &kp BANG         &kp ATSN         &kp HASH         &kp DLLR        &kp PRCT    			&kp CRRT  &kp AMPS  &kp KMLT &kp LPRN  &kp RPRN 
+        &kp LS(LA(DOWN)) &kp LS(LA(DOWN)) &hm LALT F12     &kp F2          &kp LG(LS(LC(N4))) 	&kp LEFT  &kp DOWN  &kp UP   &kp RIGHT &kp QUOT 
+        &hs LSFT GRAVE   &kp TILDE 	    &kp NON_US_BSLH  &kp LG(LA(C))   &kp LG(LS(LA(V)))      &kp UNDER &kp LEFT  &kp DOWN &kp RIGHT &kp PIPE
                                                           &trans   &trans  &trans         &trans    &trans   &trans
                         >;
                 };
                 
             raise_layer {
                 bindings = <
-        &kp TAB         &trans &trans &kp LPAR    &kp RPAR &kp UNDER       &kp MINUS &kp N7   &kp N8 &kp N9  &kp COMMA &kp BSPC
-        &hm LCTRL GRAVE &trans &trans &kp LBRC    &kp RBRC &kp PIPE        &kp PLUS  &kp N4   &kp N5 &kp N6  &kp FSLH  &kp KP_MULTIPLY
-        &kp LSHFT       &trans &trans &kp LBKT    &kp RBKT &kp BSLH        &kp N0    &kp N1   &kp N2 &kp N3  &kp EQUAL &trans
+        &kp TAB         &trans &kp LPAR    &kp RPAR &kp UNDER       &kp MINUS &kp N7   &kp N8 &kp N9  &kp COMMA 
+        &hm LCTRL GRAVE &trans &kp LBRC    &kp RBRC &kp PIPE        &kp PLUS  &kp N4   &kp N5 &kp N6  &kp KP_MULTIPLY
+        &kp LSHFT       &trans &kp LBKT    &kp RBKT &kp BSLH        &kp N0    &kp N1   &kp N2 &kp N3  &kp EQUAL 
                                           &trans     &trans   &trans       &trans    &trans   &trans
                         >;
                 };
@@ -158,20 +147,11 @@
 
             bt {
                 bindings = <
-        &kp TAB    &bt BT_NXT   &bt BT_SEL 0 &kp LPAR  &kp RPAR &kp UNDER     &kp B &trans  &trans  &trans  &kp DOT   &kp BSPC
-        &bt BT_CLR &bt BT_SEL 1 &bt BT_SEL 2 &kp LBKT  &kp RBKT &kp PIPE      &kp PLUS  &kp PG_UP  &kp K_VOL_UP &kp K_MUTE  &kp FSLH  &kp LG(LS(LC(N4)))
-        &kp LSHFT  &bt BT_SEL 3 &bt BT_SEL 4 &kp LBRC  &kp RBRC &kp BSLH      &trans    &kp PG_UP  &kp K_VOL_UP &kp K_MUTE  &trans  &kp EQUAL &trans
+        &kp TAB    &bt BT_NXT   &bt BT_SEL 0 &kp LPAR  &kp UNDER     &kp B    &trans       &trans      &kp DOT   &kp BSPC
+        &bt BT_CLR &bt BT_SEL 1 &bt BT_SEL 2 &kp LBKT  &kp PIPE      &kp PLUS &kp K_VOL_UP &kp K_MUTE  &kp FSLH  &kp LG(LS(LC(N4)))
+        &kp LSHFT  &bt BT_SEL 3 &bt BT_SEL 4 &kp LBRC  &kp BSLH      &trans   &kp K_VOL_UP &kp K_MUTE  &trans    &kp EQUAL &trans
                                                 &trans    &to 0   &trans      &trans    &to 0    &trans
                     >;
             };
-
-            league {
-                bindings = <
-        &kp TAB   &kp Q        &kp D       &kp R      &kp W &kp B     &kp J &kp F  &kp U     &kp P   &kp SEMI        &kp BSPC
-        &kp LCTRL &kp A        &kp S       &kp H      &kp T &kp G     &kp Y &kp N  &kp E     &kp O   &kp I           &kp SQT
-        &kp LSHFT &hs LSHIFT Z &kp X       &kp M      &kp C &kp V     &kp K &kp L  &kp COMMA &kp DOT &hs RSHIFT FSLH &kp RSHFT
-                                      &mt LGUI TAB &kp LALT &kp SPACE     &kp SPACE &to 0 &kp RET
-                        >;
-                };
         };
 };
