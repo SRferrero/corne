@@ -58,12 +58,6 @@
             bindings = <&to 0>;
         };
 
-        togame {
-            timeout-ms = <40>;
-            key-positions = <0 12 24>;
-            bindings = <&to 5>;
-        };
-
         sl2 {
             timeout-ms = <40>;
             key-positions = <7 8 9>;
@@ -158,20 +152,11 @@
 
             bt {
                 bindings = <
-        &kp TAB    &bt BT_NXT   &bt BT_SEL 0 &kp LPAR  &kp RPAR &kp UNDER     &kp B &trans  &trans  &trans  &kp DOT   &kp BSPC
-        &bt BT_CLR &bt BT_SEL 1 &bt BT_SEL 2 &kp LBKT  &kp RBKT &kp PIPE      &kp PLUS  &kp PG_UP  &kp K_VOL_UP &kp K_MUTE  &kp FSLH  &kp LG(LS(LC(N4)))
+        &kp TAB    &bt BT_CLR   &bt BT_SEL 0 &kp LPAR  &kp RPAR &kp UNDER     &kp B &trans  &trans  &trans  &kp DOT   &kp BSPC
+        &bt BT_NXT &bt BT_SEL 1 &bt BT_SEL 2 &kp LBKT  &kp RBKT &kp PIPE      &kp PLUS  &kp PG_UP  &kp K_VOL_UP &kp K_MUTE  &kp FSLH  &kp LG(LS(LC(N4)))
         &kp LSHFT  &bt BT_SEL 3 &bt BT_SEL 4 &kp LBRC  &kp RBRC &kp BSLH      &trans    &kp PG_UP  &kp K_VOL_UP &kp K_MUTE  &trans  &kp EQUAL &trans
                                                 &trans    &to 0   &trans      &trans    &to 0    &trans
                     >;
             };
-
-            league {
-                bindings = <
-        &kp TAB   &kp Q        &kp D       &kp R      &kp W &kp B     &kp J &kp F  &kp U     &kp P   &kp SEMI        &kp BSPC
-        &kp LCTRL &kp A        &kp S       &kp H      &kp T &kp G     &kp Y &kp N  &kp E     &kp O   &kp I           &kp SQT
-        &kp LSHFT &hs LSHIFT Z &kp X       &kp M      &kp C &kp V     &kp K &kp L  &kp COMMA &kp DOT &hs RSHIFT FSLH &kp RSHFT
-                                      &mt LGUI TAB &kp LALT &kp SPACE     &kp SPACE &to 0 &kp RET
-                        >;
-                };
         };
 };
